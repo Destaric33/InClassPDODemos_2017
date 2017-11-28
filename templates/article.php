@@ -5,6 +5,10 @@
         
         <?php
         //var_dump($_GET);
+        //Retrieve the id parameter from the URL
+        
+        
+        $id= $_GET['id'];
         ?>
 
     </div>
