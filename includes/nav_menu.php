@@ -21,6 +21,7 @@
         $pages = array(
                  'Home'=>'/InClassPDODemos/index.php',
                  'Categories'=>'/InclassPDODemos/Categories.php',
+                 'Add Category'=>'/InclassPDODemos/addcategory.php',
                  'Articles'=>'/InClassPDODemos/Articles.php',
                  'About'=>'/InClassPDODemos/about.php',
                  'Services'=>'/InClassPDODemos/services.php',
