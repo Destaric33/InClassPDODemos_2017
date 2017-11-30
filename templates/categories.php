@@ -1,4 +1,4 @@
-<!-- Categories Page Content -->
+<!-- Categories Page Content TEMPLATES and tables!! --> 
     <div class="container">
         <h1 class="mt-4 mb-3">Categories</h1>
         
@@ -36,19 +36,29 @@
           
           //var_dump($category_list);
          // exit();
-          //Start the list
-          echo "<ul class='list-group'>";
-          // Turn it blue with the below
-          echo  '<li class="list-group-item active">Select a Category</li>';
+          //Start the table
+          echo "<table class='table table-bordered table-striped'>
+              <thead class='thead-dark'>
+              <tr>
+                 <th>Category</th>
+                 <th>Edit</th>
+                 </tr>
+                 </thead>
+                 <tbody>";
+         
           
           //7.Loop the array and display it in UL list
           foreach ($category_list as $row){
-              echo "<li class='list-group-item'>
-                      <a href='articlesbycategory.php?id={$row['id']}&name={$row['category']}'>{$row['category']}</a>
+              echo "<tr>'>
+                      <td><a href='articlesbycategory.php?id={$row['id']}&name={$row['category']}'>{$row['category']}</a></td> 
                           
-                      </li>";
+                       <td><a class='btn btn-danger' href='editCategory.php?id={$row['id']}' title='Edit{$row['category']}'>
+                           <i class='fa fa-pencil-square-o fa-2x'></i></a></td>
+                      </tr>";
           }
           //end the list
-          echo "</ul>"
+          echo "</tbody></table>"
+          
 ?>
     </div>
+
